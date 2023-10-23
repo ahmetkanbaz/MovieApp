@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary py-4">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary py-4 sticky-top">
   <div className="container">
     <Link className="navbar-brand d-flex align-items-center gap-2" to='/'>
       <BiCameraMovie size = '2rem' />
