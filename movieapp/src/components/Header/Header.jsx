@@ -1,10 +1,11 @@
 import {BiCameraMovie} from 'react-icons/bi'
 import {Link} from 'react-router-dom'
+
 const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary py-4">
   <div className="container">
-    <Link className="navbar-brand d-flex align-items-center gap-2" href="#">
+    <Link className="navbar-brand d-flex align-items-center gap-2" to='/'>
       <BiCameraMovie size = '2rem' />
       <span>MovieApp</span>
     </Link>
@@ -14,10 +15,10 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="movieAppNavbar">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link" aria-current="page" href="#">Anasayfa</a>
+          <Link to='/' className="nav-link">Anasayfa</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
+          <Link to='allfilms' className="nav-link">Tüm Filmler</Link>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
