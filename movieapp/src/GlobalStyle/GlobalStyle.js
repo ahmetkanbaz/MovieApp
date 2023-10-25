@@ -23,6 +23,10 @@ export const GlobalStyle = createGlobalStyle `
   a {
     text-decoration: none;
   }
+
+  .thisYear {
+    background-color: red;
+  }
 `;
 
 // ${({theme}) => backgroundAndColor(theme)}

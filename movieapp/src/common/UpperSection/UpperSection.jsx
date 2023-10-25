@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 const UpperSection = ({title}) => {
   return (
-    <div className='py-3'>
+    <div className='pb-3'>
       <h3>{title}</h3>
     </div>
   )
