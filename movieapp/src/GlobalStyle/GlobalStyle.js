@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle `
   }
 
   .thisYear {
-    background-color: red;
+    background-color: #F0F0F0;
   }
 `;
 

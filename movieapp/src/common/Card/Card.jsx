@@ -1,26 +1,30 @@
 import { CustomCard } from "./CardStyle";
-const Card = () => {
+import PropTypes from 'prop-types'
+
+const Card = ({imageUrl, title, description}) => {
   return (
-    <div className="col-lg-3 col-md-4 col-6">
-      <CustomCard className="card">
+    <div className="col-lg-2 col-md-3 col-sm-4">
+      <CustomCard className="card h-100">
         <img
-          src="https://plus.unsplash.com/premium_photo-1682125771198-f7cbed7cb868?auto=format&fit=crop&q=80&w=2060&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="card-img-top"
-          alt="..."
+          src={imageUrl}
+          className="card-img-top object-fit-cover"
+          alt={title}
         />
         <div className="card-body">
-          <h5 className="card-title">Card title</h5>
-          <p className="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the cards content.
+          <h5 className="card-title">{title}</h5>
+          <p className="card-text mb-2">
+            {description}
           </p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
         </div>
       </CustomCard>
     </div>
   );
 };
+
+Card.propTypes = {
+  imageUrl: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+}
 
 export default Card;
