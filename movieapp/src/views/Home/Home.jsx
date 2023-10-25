@@ -1,6 +1,7 @@
 import Banner from "../../common/Banner/Banner";
 import Movies from "../../common/Movies/Movies";
 import UpperSection from "../../common/UpperSection/UpperSection";
+import DetailMovie from "../../components/DetailMovie/DetailMovie";
 
 const Home = () => {
   return (

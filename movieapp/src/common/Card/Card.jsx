@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 const Card = ({imageUrl, title, description}) => {
   return (
-    <div className="col-lg-2 col-md-3 col-sm-4">
-      <CustomCard className="card h-100">
+    <div className="col-lg-2 col-md-3 col-sm-4 col-6">
+      <CustomCard className="card h-100" onClick={() => console.log(title)}>
         <img
           src={imageUrl}
           className="card-img-top object-fit-cover"
