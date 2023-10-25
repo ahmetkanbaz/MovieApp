@@ -11,7 +11,7 @@ const Card = ({imageUrl, title, description}) => {
           alt={title}
         />
         <div className="card-body">
-          <h5 className="card-title">{title}</h5>
+          <h6 className="card-title">{title}</h6>
           <p className="card-text mb-2">
             {description}
           </p>

@@ -15,7 +15,12 @@ export const CustomCard = styled.div`
     height: 120px;
   }
 
+  h6 {
+    font-size: 1.1rem;
+  }
+
   p {
+    font-size: .93rem;
     @media screen and (max-width: 768px) {
       display: -webkit-box;
       -webkit-line-clamp: 2;
