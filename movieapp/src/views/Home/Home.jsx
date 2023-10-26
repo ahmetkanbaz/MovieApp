@@ -1,9 +1,13 @@
 import Banner from "../../common/Banner/Banner";
 import Movies from "../../common/Movies/Movies";
 import UpperSection from "../../common/UpperSection/UpperSection";
-import DetailMovie from "../../components/DetailMovie/DetailMovie";
+import {useSelector} from 'react-redux'
 
 const Home = () => {
+  const movies = useSelector((state) => state.movies.movies)
+
+  const hightRating = [...(movies.results)].sort((a, b) => b.imdbrating - a.imdbrating).slice(0, 10)
+
   return (
     <>
       <Banner
@@ -15,8 +19,8 @@ const Home = () => {
       />
       <div className="py-5 thisYear">
         <div className="container">
-          <UpperSection title="En Yeni Filmler" />
-          <Movies />
+          <UpperSection title="Rating'i  En Yüksek Olan Filmler" />
+          <Movies movies={hightRating}/>
         </div>
       </div>
     </>
