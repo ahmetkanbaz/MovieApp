@@ -5,16 +5,21 @@ import {
   setError,
 } from "../redux/slices/movies/moviesSlice";
 
+const baseUrl = import.meta.env.VITE_OTT_URL
+const apiKEY = import.meta.env.VITE_XRapidAPIKey
+const apiHOST = import.meta.env.VITE_XRapidAPIHost
+
+
 export const getAllMovies = () => async (dispatch) => {
   dispatch(setLoading());
   try {
     const response = await axios.get(
-      "https://ott-details.p.rapidapi.com/advancedsearch",
+      baseUrl,
       {
         headers: {
           "X-RapidAPI-Key":
-            "a00042e7e2msh577d9c138893f2dp1a3eaajsned4e60a07f10",
-          "X-RapidAPI-Host": "ott-details.p.rapidapi.com",
+            apiKEY,
+          "X-RapidAPI-Host": apiHOST,
         },
       }
     );
