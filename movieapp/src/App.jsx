@@ -10,13 +10,11 @@ function App() {
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
 
-  useEffect(() => {
-    if (!movies.length) {
-      dispatch(getAllMovies());
-    }
-  }, []);
-
-  console.log(movies);
+  // useEffect(() => {
+  //   if (!movies.length) {
+  //     dispatch(getAllMovies());
+  //   }
+  // }, []);
 
   return (
     <>

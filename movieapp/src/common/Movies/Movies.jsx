@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import Card from "../Card/Card";
 const Movies = ({ movies }) => {
+
+  console.log(movies)
   return (
     <div className="row g-4">
       <Card
@@ -33,7 +35,7 @@ const Movies = ({ movies }) => {
 };
 
 Movies.propTypes = {
-  movies: PropTypes.object,
+  movies: PropTypes.array,
 };
 
 export default Movies;
