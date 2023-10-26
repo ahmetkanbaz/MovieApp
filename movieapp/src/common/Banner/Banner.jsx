@@ -12,8 +12,8 @@ const Banner = ({ title, content, imageUrl }) => {
         <div className="bannerBackground">
           <div className="gradientBackground w-100"></div>
         </div>
-        <div className="d-flex flex-column align-items-center justify-content-center bannerInfo">
-          <p className="text-uppercase display-4">{title}</p>
+        <div className="d-flex flex-column align-items-center justify-content-center w-100 bannerInfo">
+          <p className="display-4">{title}</p>
           <p className="mb-0 fst-italic fs-2 text-center">{content}</p>
         </div>
       </CustomBanner>
