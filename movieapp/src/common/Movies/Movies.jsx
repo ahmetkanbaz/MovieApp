@@ -5,7 +5,7 @@ const Movies = ({ movies }) => {
     <div className="row justify-content-center g-4">
       {
         movies?.map((movie) => (
-          <Card key={movie.imdbid} movie={movie} />
+          <Card key={movie.imdbID} movie={movie} />
         ))
       }
     </div>

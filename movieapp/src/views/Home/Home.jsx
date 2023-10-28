@@ -6,7 +6,7 @@ import {useSelector} from 'react-redux'
 const Home = () => {
   const movies = useSelector((state) => state.movies.movies)
 
-  const hightRating = [...(movies?.results || [])].sort((a, b) => b.imdbrating - a.imdbrating).slice(0, 10)
+  const hightRating = [...movies].sort((a, b) => b.imdbRating - a.imdbRating).slice(0, 6)
 
   return (
     <>

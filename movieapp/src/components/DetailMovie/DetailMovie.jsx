@@ -12,13 +12,7 @@ const DetailMovie = () => {
   const {id} = useParams()
   const movies = useSelector((state) => state.movies.movies)
 
-  useEffect(() => {
-    if(!movies.results) {
-      dispatch(getAllMovies())
-    }
-  }, [movies])
-
-  console.log(movies.results)
+  console.log(movies)
   return (
     <section className="py-5">
       <div className="container">
