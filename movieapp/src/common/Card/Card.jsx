@@ -1,9 +1,11 @@
 import { CustomCard } from "./CardStyle";
 import PropTypes from 'prop-types'
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({movie}) => {
-  const {title, imageurl, synopsis} = movie
+  const navigate = useNavigate()
+  const {imdbid, title, imageurl, synopsis} = movie
   const [loadingImage, setLoadingImage] = useState(false)
 
   const handleLoadingImage = () => {
@@ -12,7 +14,7 @@ const Card = ({movie}) => {
   
   return (
     <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-      <CustomCard className="card h-100" onClick={() => console.log(title)}>
+      <CustomCard className="card h-100" onClick={() => navigate(`/allfilms/${imdbid}`)}>
         {(imageurl && !loadingImage) ? (
           <img
           src={imageurl[0]}
