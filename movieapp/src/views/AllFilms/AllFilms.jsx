@@ -9,7 +9,7 @@ const AllFilms = () => {
     <section className="py-5">
       <div className="container">
         <UpperSection title = 'Tüm Filmler' />
-        <Movies movies = {movies?.results}/>
+        <Movies movies = {movies}/>
       </div>
     </section>
   )
