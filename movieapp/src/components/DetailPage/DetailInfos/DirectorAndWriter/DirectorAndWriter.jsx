@@ -1,22 +1,16 @@
 import PropTypes from "prop-types";
+import LabelValue from "../../../../common/LabelValue/LabelValue";
 const DirectorAndWriter = ({ writer, director }) => {
   return (
     <div className="py-4 border-top">
       {writer == director ? (
-        <p className="mb-0">
-          <span className="fw-bold">Writer and Author:</span>{" "}
-          <span className="ms-1">{writer}</span>
-        </p>
+        <LabelValue title='Writer and Author' value={writer} />
       ) : (
         <>
           <div className="mb-4">
-            <span className="fw-bold">Writer:</span>
-            <span className="ms-1">{writer}</span>
+            <LabelValue title='Writer' value={writer} />
           </div>
-          <div>
-            <span className="fw-bold">Director:</span>
-            <span className="ms-1">{director}</span>
-          </div>
+          <LabelValue title='Director' value={director} />
         </>
       )}
     </div>

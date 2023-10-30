@@ -1,20 +1,35 @@
 import PropTypes from "prop-types";
 import DirectorAndWriter from "./DirectorAndWriter/DirectorAndWriter";
-import Actors from "./Actors/Actors";
-const DetailInfos = ({ released, writer, director, actors, production, imdbRating, plot }) => {
+import DetailList from "./DetailList/DetailList";
+import LabelValue from "../../../common/LabelValue/LabelValue";
+const DetailInfos = ({
+  released,
+  runtime,
+  genre,
+  writer,
+  director,
+  actors,
+  production,
+  imdbRating,
+  plot,
+}) => {
   return (
     <div className="col-md-6 col-12">
       <p className="mb-1 text-end fst-italic">
         Release Date: <span className="ms-1">{released}</span>
       </p>
-      <p>IMDB Score: <span className="ms-1">{imdbRating}</span></p>
-      <p>{plot}</p>
+      <LabelValue title="IMDB Score" value={imdbRating} />
 
-      <Actors actors={actors} />
-      
+      <p className="mt-3">{plot}</p>
+
+      <LabelValue title="Movie Duration" value={runtime} />
+
+      <DetailList title="Genres" listOfDetail={genre} />
+
+      <DetailList title="Actors" listOfDetail={actors} />
+
       <div className="d-flex justify-content-center mb-2">
-        <span className="fw-bold">Production:</span>
-        <span className="ms-1">{production}</span>
+        <LabelValue title="Production" value={production} />
       </div>
       <DirectorAndWriter writer={writer} director={director} />
     </div>
@@ -23,6 +38,8 @@ const DetailInfos = ({ released, writer, director, actors, production, imdbRatin
 
 DetailInfos.propTypes = {
   released: PropTypes.string,
+  genre: PropTypes.string,
+  runtime: PropTypes.number,
   writer: PropTypes.string,
   director: PropTypes.string,
   actors: PropTypes.string,

@@ -55,6 +55,10 @@ const DetailMovie = () => {
               <div className="row">
                 <DetailInfos
                   released={released}
+                  genre={genre}
+                  language = {language}
+                  country = {country}
+                  runtime={runtime}
                   writer={writer}
                   director={director}
                   actors = {actors}
