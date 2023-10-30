@@ -57,6 +57,7 @@ const DetailMovie = () => {
                   released={released}
                   writer={writer}
                   director={director}
+                  actors = {actors}
                   production={production}
                   imdbRating={imdbRating}
                   plot={plot}
