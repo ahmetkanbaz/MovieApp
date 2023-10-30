@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import Card from "../Card/Card";
 const Movies = ({ movies }) => {
   return (
-    <div className="row g-4">
+    <div className="row justify-content-center g-4">
       {
         movies?.map((movie) => (
-          <Card key={movie.imdbid} movie={movie} />
+          <Card key={movie.imdbID} movie={movie} />
         ))
       }
     </div>
