@@ -64,6 +64,7 @@ const DetailMovie = () => {
                   actors = {actors}
                   production={production}
                   imdbRating={imdbRating}
+                  awards={awards}
                   plot={plot}
                 />
                 <DetailImage title={title} poster={poster} />

@@ -2,8 +2,11 @@ import PropTypes from "prop-types";
 import DirectorAndWriter from "./DirectorAndWriter/DirectorAndWriter";
 import DetailList from "./DetailList/DetailList";
 import LabelValue from "../../../common/LabelValue/LabelValue";
+import LanguageCountry from "./LanguageCountry/LanguageCountry";
 const DetailInfos = ({
   released,
+  language,
+  country,
   runtime,
   genre,
   writer,
@@ -11,6 +14,7 @@ const DetailInfos = ({
   actors,
   production,
   imdbRating,
+  awards,
   plot,
 }) => {
   return (
@@ -28,9 +32,14 @@ const DetailInfos = ({
 
       <DetailList title="Actors" listOfDetail={actors} />
 
+      <DetailList title="Awards" listOfDetail={awards} />
+
+      <LanguageCountry language={language} country={country} />
+
       <div className="d-flex justify-content-center mb-2">
         <LabelValue title="Production" value={production} />
       </div>
+
       <DirectorAndWriter writer={writer} director={director} />
     </div>
   );
@@ -38,13 +47,16 @@ const DetailInfos = ({
 
 DetailInfos.propTypes = {
   released: PropTypes.string,
+  language: PropTypes.string,
+  country: PropTypes.string,
   genre: PropTypes.string,
   runtime: PropTypes.number,
   writer: PropTypes.string,
   director: PropTypes.string,
   actors: PropTypes.string,
-  production: PropTypes.string || PropTypes.number,
+  production: PropTypes.string,
   imdbRating: PropTypes.number,
+  awards: PropTypes.string,
   plot: PropTypes.string,
 };
 
