@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import Movies from "../Movies/Movies";
 import UpperSection from "../UpperSection/UpperSection";
 
-const HomeMovies = ({ className, title, movies }) => {
+const MoviesContainer = ({ className, title, movies }) => {
   return (
     <section className={`py-5 ${className}`}>
       <div className="container">
@@ -13,10 +13,10 @@ const HomeMovies = ({ className, title, movies }) => {
   );
 };
 
-HomeMovies.propTypes = {
+MoviesContainer.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
   movies: PropTypes.array,
 };
 
-export default HomeMovies;
+export default MoviesContainer;

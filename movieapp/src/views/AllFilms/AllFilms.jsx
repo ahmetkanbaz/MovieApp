@@ -1,4 +1,6 @@
+import FilterItems from '../../common/FilterItems/FilterItems';
 import Movies from '../../common/Movies/Movies'
+import MoviesContainer from '../../common/MoviesContainer/MoviesContainer';
 import UpperSection from '../../common/UpperSection/UpperSection'
 import {useSelector} from 'react-redux'
 
@@ -6,12 +8,10 @@ const AllFilms = () => {
   const movies = useSelector((state) => state.movies.movies);
   
   return (
-    <section className="py-5">
-      <div className="container">
-        <UpperSection title = 'All Films' />
-        <Movies movies = {movies}/>
-      </div>
-    </section>
+    <>
+      <FilterItems />
+      <MoviesContainer title='All Films' movies={movies} />
+    </>
   )
 }
 

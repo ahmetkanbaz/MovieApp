@@ -1,5 +1,5 @@
 import Banner from "../../common/Banner/Banner";
-import HomeMovies from "../../common/HomeMovies/HomeMovies";
+import MoviesContainer from "../../common/MoviesContainer/MoviesContainer";
 import {useSelector} from 'react-redux'
 
 const Home = () => {
@@ -15,8 +15,8 @@ const Home = () => {
         content="Her Film, Yeni Bir Macera"
         imageUrl="https://plus.unsplash.com/premium_photo-1682125771198-f7cbed7cb868?auto=format&fit=crop&q=80&w=2060&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
-      <HomeMovies className = 'thisYear' title='Latest Movies' movies={latestMovies} />
-      <HomeMovies title='Movies with the Highest Ratings' movies={hightRating} />
+      <MoviesContainer className = 'thisYear' title='Latest Movies' movies={latestMovies} />
+      <MoviesContainer title='Movies with the Highest Ratings' movies={hightRating} />
     </>
   );
 };
