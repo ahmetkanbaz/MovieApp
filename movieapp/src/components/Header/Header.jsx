@@ -15,10 +15,10 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="movieAppNavbar">
       <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <Link to='/' className="nav-link">Anasayfa</Link>
+          <Link to='/' className="nav-link">Home</Link>
         </li>
         <li className="nav-item">
-          <Link to='allfilms' className="nav-link">Tüm Filmler</Link>
+          <Link to='allfilms' className="nav-link">All Films</Link>
         </li>
         <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -4,8 +4,8 @@ const Movies = ({ movies }) => {
   return (
     <div className="row justify-content-center g-4">
       {
-        movies?.map((movie) => (
-          <Card key={movie.imdbID} movie={movie} />
+        movies.map((movie) => (
+          <Card key={movie.id} movie={movie} />
         ))
       }
     </div>
