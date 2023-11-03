@@ -32,6 +32,15 @@ export const GlobalStyle = createGlobalStyle `
     font-size: .89rem;
     font-style: italic;
   }
+
+  .nav-link {
+    color: #000000;
+    transition: all .3s ease-in-out;
+  }
+
+  .nav-link:hover {
+    color: #BA49FF;
+  }
 `;
 
 // ${({theme}) => backgroundAndColor(theme)}
