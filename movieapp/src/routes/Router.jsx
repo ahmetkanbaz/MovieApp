@@ -1,7 +1,7 @@
 import { useRoutes } from "react-router-dom";
 import Home from "../views/Home/Home";
 import AllFilms from "../views/AllFilms/AllFilms";
-import DetailMovie from "../components/DetailMovie/DetailMovie";
+import DetailMovie from "../views/DetailMovie/DetailMovie";
 
 
 const Router = () => {

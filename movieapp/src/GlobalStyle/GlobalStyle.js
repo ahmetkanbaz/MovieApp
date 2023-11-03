@@ -27,6 +27,11 @@ export const GlobalStyle = createGlobalStyle `
   .thisYear {
     background-color: #F0F0F0;
   }
+
+  ::placeholder {
+    font-size: .89rem;
+    font-style: italic;
+  }
 `;
 
 // ${({theme}) => backgroundAndColor(theme)}

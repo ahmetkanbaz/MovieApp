@@ -17,3 +17,13 @@ export const getAllMovies = () => async (dispatch) => {
     dispatch(setError(error.message));
   }
 };
+
+export const getSingleMovie = async (id) => {
+  try {
+    const response = await axios.get(`${baseUrl}/movies/${id}`)
+    return response.data
+  }
+  catch (error) {
+    return error
+  }
+}

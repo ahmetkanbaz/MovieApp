@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Card = ({movie}) => {
   const navigate = useNavigate()
-  const {imdbID, title, poster, plot} = movie
+  const {id, title, poster, plot} = movie
   const [loadingImage, setLoadingImage] = useState(false)
 
   const handleLoadingImage = () => {
@@ -14,7 +14,7 @@ const Card = ({movie}) => {
   
   return (
     <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-      <CustomCard className="card h-100" onClick={() => navigate(`/allfilms/${imdbID}`)}>
+      <CustomCard className="card h-100" onClick={() => navigate(`/allfilms/${id}`)}>
         {(poster && !loadingImage) ? (
           <img
           src={poster}
