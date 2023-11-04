@@ -2,6 +2,7 @@
 import UpperSection from "../../common/UpperSection/UpperSection";
 import FormButtons from "./FormButtons/FormButtons";
 import LabelInput from "../../common/LabelInput/LabelInput";
+import MovieYearRuntime from "./MovieYearRuntime/MovieYearRuntime";
 
 const AddNewMovieForm = ({
   handleSubmit,
@@ -18,7 +19,6 @@ const AddNewMovieForm = ({
       <div className="container">
         <UpperSection title="Add New Movie" />
         <form onSubmit={handleSubmit}>
-          <div className="position-relative">
             <LabelInput
               labelTitle="Movie Name"
               type="text"
@@ -28,24 +28,14 @@ const AddNewMovieForm = ({
               onChange={handleChange}
               onBlur={handleBlur}
               disabled={isSubmitting}
-              placeholder="Enter the name of the movie"
+              placeholder="Enter the name of the movie..."
             />
-          </div>
-          <div className="row g-3">
-            <div className="col-md-4 col-12">
-              <LabelInput
-                labelTitle="Movie Year"
-                type="number"
-                name="year"
-                id="year"
-                value={values.year}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                disabled={isSubmitting}
-                placeholder="Enter the year of the movie"
-              />
-            </div>
-          </div>
+          <MovieYearRuntime
+            values={values}
+            handleChange={handleChange}
+            handleBlur={handleBlur}
+            isSubmitting={isSubmitting}
+          />
           <FormButtons handleReset={handleReset} />
         </form>
       </div>
