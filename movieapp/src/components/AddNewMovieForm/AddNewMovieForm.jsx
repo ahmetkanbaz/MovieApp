@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import UpperSection from "../../common/UpperSection/UpperSection";
-import { addNewMovie } from "../../utils/posts";
+import FormButtons from './FormButtons/FormButtons'
 
 const AddNewMovieForm = ({
   handleSubmit,
@@ -16,7 +17,7 @@ const AddNewMovieForm = ({
       <div className="container">
         <UpperSection title="Add New Movie" />
         <form onSubmit={handleSubmit}>
-          <button type="submit">Tıkla</button>
+          <FormButtons />
         </form>
       </div>
     </section>
