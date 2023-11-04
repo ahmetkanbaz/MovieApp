@@ -3,7 +3,7 @@ import UpperSection from "../../common/UpperSection/UpperSection";
 import FormButtons from "./FormButtons/FormButtons";
 import LabelInput from "../../common/LabelInput/LabelInput";
 import MovieYearRuntime from "./MovieYearRuntime/MovieYearRuntime";
-import MovieDirectorAuthor from "./MovieDirectorAuthor/MovieDirectorAuthor";
+import MovieDirectorWriter from "./MovieDirectorWriter/MovieDirectorWriter";
 
 const AddNewMovieForm = ({
   handleSubmit,
@@ -50,12 +50,28 @@ const AddNewMovieForm = ({
             placeholder="Enter the genre of the movie. If there is more than one, write them separated by ','."
           />
 
-          <MovieDirectorAuthor
+          <MovieDirectorWriter
             values={values}
             handleChange={handleChange}
             handleBlur={handleBlur}
             isSubmitting={isSubmitting}
           />
+          <div className="d-flex flex-column">
+            <label htmlFor="plot" className="form-label">
+              Content
+            </label>
+            <textarea
+              name="plot"
+              id="plot"
+              rows="5"
+              value={values.plot}
+              className="form-control"
+              placeholder="Enter a brief description of the movie..."
+              onChange={handleChange}
+              onBlur={handleBlur}
+              disabled={isSubmitting}
+            ></textarea>
+          </div>
           <FormButtons handleReset={handleReset} />
         </form>
       </div>

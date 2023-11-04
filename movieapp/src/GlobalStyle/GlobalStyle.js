@@ -48,6 +48,10 @@ export const GlobalStyle = createGlobalStyle `
       border: 1px solid #073d87;
     }
   }
+
+  textarea {
+    resize: none;
+  }
 `;
 
 // ${({theme}) => backgroundAndColor(theme)}
