@@ -4,6 +4,8 @@ import FormButtons from "./FormButtons/FormButtons";
 import LabelInput from "../../common/LabelInput/LabelInput";
 import MovieYearRuntime from "./MovieYearRuntime/MovieYearRuntime";
 import MovieDirectorWriter from "./MovieDirectorWriter/MovieDirectorWriter";
+import MovieLanguageCountry from "./MovieLanguageCountry/MovieLanguageCountry";
+import MovieAwardsPoster from "./MovieAwardsPoster/MovieAwardsPoster";
 
 const AddNewMovieForm = ({
   handleSubmit,
@@ -56,7 +58,7 @@ const AddNewMovieForm = ({
             handleBlur={handleBlur}
             isSubmitting={isSubmitting}
           />
-          <div className="d-flex flex-column">
+          <div className="d-flex flex-column position-relative mb-4">
             <label htmlFor="plot" className="form-label">
               Content
             </label>
@@ -72,6 +74,21 @@ const AddNewMovieForm = ({
               disabled={isSubmitting}
             ></textarea>
           </div>
+
+          <MovieLanguageCountry
+            values={values}
+            handleChange={handleChange}
+            handleBlur={handleBlur}
+            isSubmitting={isSubmitting}
+          />
+
+          <MovieAwardsPoster
+            values={values}
+            handleChange={handleChange}
+            handleBlur={handleBlur}
+            isSubmitting={isSubmitting}
+          />
+          
           <FormButtons handleReset={handleReset} />
         </form>
       </div>
