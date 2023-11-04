@@ -11,7 +11,7 @@ const FormButtons = ({ handleReset }) => {
     hovertextcolor: "#000000",
   };
   return (
-    <div className="d-flex gap-2 gap-md-4">
+    <div className="d-flex justify-content-md-end justify-content-center gap-2 gap-md-4 my-4">
       <Button
         title="Add"
         backgroundcolor="#18496a"

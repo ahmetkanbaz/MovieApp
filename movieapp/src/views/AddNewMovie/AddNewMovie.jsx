@@ -25,8 +25,9 @@ const AddNewMovie = () => {
       production: ''
     },
     onSubmit: async (values, bag) => {
-      const response = await addNewMovie(values)
-      console.log(response)
+      // const response = await addNewMovie(values)
+      // console.log(response)
+      console.log(values)
       bag.setSubmitting(false)
       bag.resetForm()
     }
