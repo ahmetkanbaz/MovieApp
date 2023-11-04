@@ -8,7 +8,7 @@ const MovieYearRuntime = ({
   isSubmitting,
 }) => {
   return (
-    <div className="row">
+    <div className="row align-items-center">
       <div className="col-md-4 col-12">
         <LabelInput
           labelTitle="Movie Year"
