@@ -12,6 +12,8 @@ const Button = ({
   hoverbackgroundcolor,
   hovertextcolor,
   buttonClassName,
+  buttonOnClick,
+  buttonType
 }) => {
   return (
     <CustomButton
@@ -24,6 +26,8 @@ const Button = ({
       buttonfontsize={buttonfontsize}
       hoverbackgroundcolor={hoverbackgroundcolor}
       hovertextcolor={hovertextcolor}
+      onClick={buttonOnClick}
+      type={buttonType}
     >
       {title}
     </CustomButton>

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import UpperSection from "../../common/UpperSection/UpperSection";
-import FormButtons from './FormButtons/FormButtons'
+import FormButtons from "./FormButtons/FormButtons";
 
 const AddNewMovieForm = ({
   handleSubmit,
@@ -17,7 +17,12 @@ const AddNewMovieForm = ({
       <div className="container">
         <UpperSection title="Add New Movie" />
         <form onSubmit={handleSubmit}>
-          <FormButtons />
+          <FormButtons handleReset={handleReset} />
+          <button
+            onClick={() => {
+              handleReset();
+            }}
+          >Reset</button>
         </form>
       </div>
     </section>
