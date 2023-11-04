@@ -59,6 +59,18 @@ const AddNewMovieForm = ({
             handleBlur={handleBlur}
             isSubmitting={isSubmitting}
           />
+
+          <LabelInput
+            labelTitle='Actors'
+            type='text'
+            id='actors'
+            name='actors'
+            value={values.actors}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            placeholder="Enter the actors in the movie. If more than one, separate with ','..."
+            disabled={isSubmitting}
+          />
           <div className="d-flex flex-column position-relative mb-4">
             <label htmlFor="plot" className="form-label">
               Content
