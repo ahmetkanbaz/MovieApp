@@ -41,6 +41,13 @@ export const GlobalStyle = createGlobalStyle `
   .nav-link:hover {
     color: #BA49FF;
   }
+
+  .form-control {
+    &:focus {
+      box-shadow: none;
+      border: 1px solid #073d87;
+    }
+  }
 `;
 
 // ${({theme}) => backgroundAndColor(theme)}
