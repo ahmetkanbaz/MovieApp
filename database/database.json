@@ -181,6 +181,27 @@
       "poster": "https://m.media-amazon.com/images/M/MV5BMzFiYWQxYzgtOThmYi00ZmIwLWFlZWMtMzk2NTI2YTYzMjkyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
       "imdbRating": 7.3,
       "production": "Netflix"
+    },
+    {
+      "title": "Killers of the Flower Moon",
+      "year": 2023,
+      "released": "14 Aug 2023",
+      "runtime": 206,
+      "genre": "Crime, Drama, History",
+      "director": " Martin Scorsese",
+      "writer": " Eric Roth, Martin Scorsese, David Grann",
+      "actors": "",
+      "plot": "When oil is discovered in 1920s Oklahoma under Osage Nation land, the Osage people are murdered one by one - until the FBI steps in to unravel the mystery.",
+      "language": "English",
+      "country": "USA",
+      "awards": "Nominated for 2 Golden Globes.",
+      "poster": "https://avatars.mds.yandex.net/i?id=2a0000018b821dac1abe66497aba6d779c5b-1607718-fast-images&n=13",
+      "metascore": "",
+      "imdbRating": 8,
+      "imdbVotes": "",
+      "imdbID": "",
+      "production": "Netflix",
+      "id": 11
     }
   ]
 }

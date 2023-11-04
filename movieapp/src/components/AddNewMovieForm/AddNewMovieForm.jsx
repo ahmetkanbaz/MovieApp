@@ -6,6 +6,7 @@ import MovieYearRuntime from "./MovieYearRuntime/MovieYearRuntime";
 import MovieDirectorWriter from "./MovieDirectorWriter/MovieDirectorWriter";
 import MovieLanguageCountry from "./MovieLanguageCountry/MovieLanguageCountry";
 import MovieAwardsPoster from "./MovieAwardsPoster/MovieAwardsPoster";
+import MovieImdbProduction from "./MovieImdbProduction/MovieImdbProduction";
 
 const AddNewMovieForm = ({
   handleSubmit,
@@ -88,7 +89,13 @@ const AddNewMovieForm = ({
             handleBlur={handleBlur}
             isSubmitting={isSubmitting}
           />
-          
+
+          <MovieImdbProduction
+            values={values}
+            handleChange={handleChange}
+            handleBlur={handleBlur}
+            isSubmitting={isSubmitting}
+          />
           <FormButtons handleReset={handleReset} />
         </form>
       </div>

@@ -43,6 +43,8 @@ const DetailMovie = () => {
     production,
   } = singleMovie || {};
 
+  console.log(poster)
+
   return (
     <section className="py-5">
       <div className="container">

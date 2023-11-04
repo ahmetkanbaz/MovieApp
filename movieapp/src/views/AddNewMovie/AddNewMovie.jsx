@@ -18,16 +18,12 @@ const AddNewMovie = () => {
       country: '',
       awards: '',
       poster: '',
-      metascore: '',
       imdbRating: '',
-      imdbVotes: '',
-      imdbID: '',
       production: ''
     },
     onSubmit: async (values, bag) => {
-      // const response = await addNewMovie(values)
-      // console.log(response)
-      console.log(values)
+      const response = await addNewMovie(values)
+      console.log(response)
       bag.setSubmitting(false)
       bag.resetForm()
     }
