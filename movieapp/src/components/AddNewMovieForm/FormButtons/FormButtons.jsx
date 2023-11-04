@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import Button from "../../../common/Button/Button";
-import Toast from "../../../common/Toast/Toast";
 
 const FormButtons = ({ handleReset }) => {
   const buttonStyle = {
@@ -10,15 +9,6 @@ const FormButtons = ({ handleReset }) => {
     buttonfontsize: ".93rem",
     borderradius: "7px",
     hovertextcolor: "#000000",
-  };
-
-  const handleResetForm = () => {
-    // Toast({
-    //   message: "Form başarılı bir şekilde temizlendi.",
-    //   type: "success",
-    // });
-    console.log('first')
-    handleReset();
   };
   return (
     <div className="d-flex gap-2 gap-md-4">
@@ -32,13 +22,7 @@ const FormButtons = ({ handleReset }) => {
         title="Reset Form"
         backgroundcolor="#da7800"
         hoverbackgroundcolor="#ff9412"
-        buttonOnClick={() => {
-          Toast({
-            message: "Form Başarılı Bir Şekilde Temizlendi.",
-            type: "success",
-          });
-          handleReset();
-        }}
+        buttonOnClick={handleReset}
         {...buttonStyle}
       />
     </div>

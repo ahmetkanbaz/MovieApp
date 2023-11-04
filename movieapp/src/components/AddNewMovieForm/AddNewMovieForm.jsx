@@ -18,11 +18,6 @@ const AddNewMovieForm = ({
         <UpperSection title="Add New Movie" />
         <form onSubmit={handleSubmit}>
           <FormButtons handleReset={handleReset} />
-          <button
-            onClick={() => {
-              handleReset();
-            }}
-          >Reset</button>
         </form>
       </div>
     </section>
