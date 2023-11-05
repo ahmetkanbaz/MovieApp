@@ -24,6 +24,6 @@ export const getSingleMovie = async (id) => {
     return response.data
   }
   catch (error) {
-    return error
+    return error.message
   }
 }
