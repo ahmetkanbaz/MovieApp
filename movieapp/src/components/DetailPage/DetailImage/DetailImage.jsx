@@ -9,23 +9,20 @@ const DetailImage = ({ title, poster }) => {
   };
   return (
     <div className="col-md-6 col-12 order-0 order-md-1">
-      <div></div>
-      <div>
-        {!loading ? (
-          <img
-            src={poster}
-            alt={title}
-            onError={handleLoadingImage}
-            className="rounded-3 img-fluid w-100"
-          />
-        ) : (
-          <img
-            src="https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Default Image"
-            className="rounded-3 img-fluid -100"
-          />
-        )}
-      </div>
+      {!loading ? (
+        <img
+          src={poster}
+          alt={title}
+          onError={handleLoadingImage}
+          className="rounded-3 img-fluid w-100"
+        />
+      ) : (
+        <img
+          src="https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Default Image"
+          className="rounded-3 img-fluid -100"
+        />
+      )}
     </div>
   );
 };
