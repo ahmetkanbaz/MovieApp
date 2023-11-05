@@ -1,4 +1,9 @@
-const FilterItems = () => {
+const FilterItems = ({setSearch}) => {
+
+  const handleSearchValue = (e) => {
+    setSearch(e.target.value)
+  }
+
   return (
     <div className="pt-5">
       <div className="container">
@@ -16,17 +21,12 @@ const FilterItems = () => {
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="#">
-                    Action
+                    A - Z
                   </a>
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
+                    Z - A
                   </a>
                 </li>
               </ul>
@@ -34,7 +34,12 @@ const FilterItems = () => {
           </div>
 
           <div className="col-sm-6 col-12">
-            <input type="text" className="form-control rounded-pill" placeholder="Search by movie or director name..."/>
+            <input
+              type="text"
+              className="form-control rounded-pill"
+              placeholder="Search by movie or director name..."
+              onChange={(e) => handleSearchValue(e)}
+            />
           </div>
         </div>
       </div>
