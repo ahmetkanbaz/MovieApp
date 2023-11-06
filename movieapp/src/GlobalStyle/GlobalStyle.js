@@ -52,6 +52,10 @@ export const GlobalStyle = createGlobalStyle`
   textarea {
     resize: none;
   }
+
+  footer {
+    background-color: #F0F0F0;
+  }
 `;
 
 // ${({theme}) => backgroundAndColor(theme)}
