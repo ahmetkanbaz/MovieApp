@@ -1,12 +1,19 @@
 import Banner from "../../common/Banner/Banner";
 import MoviesContainer from "../../common/MoviesContainer/MoviesContainer";
-import {useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
+import {useEffect} from 'react'
+import { getAllMovies } from "../../utils/requests";
 
 const Home = () => {
+  const dispatch = useDispatch()
   const movies = useSelector((state) => state.movies.movies)
 
   const latestMovies = [...movies].sort((a, b) => new Date(b.released) - new Date(a.released)).slice(0, 6)
   const hightRating = [...movies].sort((a, b) => b.imdbRating - a.imdbRating).slice(0, 6)
+
+  useEffect(() => {
+    dispatch(getAllMovies())
+  }, [])
 
   return (
     <>

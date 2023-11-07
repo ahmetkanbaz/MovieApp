@@ -14,7 +14,7 @@ const Card = ({movie}) => {
   
   return (
     <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-      <CustomCard className="card h-100" onClick={() => navigate(`/allfilms/${id}`)}>
+      <CustomCard className="card h-100" onClick={() => navigate(`/allmovies/${id}`)}>
         {(poster && !loadingImage) ? (
           <img
           src={poster}

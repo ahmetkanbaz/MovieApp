@@ -15,10 +15,7 @@
       "country": "UK, New Zealand",
       "awards": "Nominated for 1 BAFTA Film Award. Another 4 wins & 10 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BZWI3ZThmYzUtNDJhOC00ZWY4LThiNmMtZDgxNjE3Yzk4NDU1XkEyXkFqcGdeQXVyNTk5Nzg1NjQ@._V1_SX300.jpg",
-      "metascore": 91,
       "imdbRating": 8.3,
-      "imdbVotes": "21,722",
-      "imdbID": "tt7905466",
       "production": "Warner Bros. Pictures"
     },
     {
@@ -36,10 +33,7 @@
       "country": "Mexico",
       "awards": "24 wins & 20 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGYyZTk5MjYtNGY2ZS00NzRhLTgwMWMtZjhmMmQ4OGFkNTNiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
-      "metascore": 84,
       "imdbRating": 7.7,
-      "imdbVotes": 330,
-      "imdbID": "tt6010976",
       "production": "1091"
     },
     {
@@ -57,10 +51,7 @@
       "country": "USA",
       "awards": "4 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU0NDE5NTU0OV5BMl5BanBnXkFtZTcwMzI1OTMzOQ@@._V1_SX300.jpg",
-      "metascore": 45,
       "imdbRating": 6.4,
-      "imdbVotes": "191,388",
-      "imdbID": "tt1980209",
       "boxOffice": "$49,300,000",
       "production": "Paramount Studios"
     },
@@ -79,10 +70,7 @@
       "country": "USA",
       "awards": "Nominated for 5 Golden Globes. Another 35 wins & 159 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGUyM2ZiZmUtMWY0OC00NTQ4LThkOGUtNjY2NjkzMDJiMWMwXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SX300.jpg",
-      "metascore": 94,
       "imdbRating": 8.2,
-      "imdbVotes": "144,536",
-      "imdbID": "tt1302006",
       "production": "Netflix"
     },
     {
@@ -100,10 +88,7 @@
       "country": "USA, UK, China",
       "awards": "Won 3 Golden Globes. Another 70 wins & 242 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg",
-      "metascore": 83,
       "imdbRating": 7.8,
-      "imdbVotes": "318,841",
-      "imdbID": "tt7131622",
       "production": "Columbia Pictures"
     },
     {
@@ -121,10 +106,7 @@
       "country": "UK, USA",
       "awards": "Won 1 Golden Globe. Another 86 wins & 212 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BZGVmY2RjNDgtMTc3Yy00YmY0LTgwODItYzBjNWJhNTRlYjdkXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg",
-      "metascore": 93,
       "imdbRating": 8.1,
-      "imdbVotes": "108,524",
-      "imdbID": "tt7653254",
       "production": "Netflix"
     },
     {
@@ -142,10 +124,7 @@
       "country": "USA, Canada",
       "awards": "Nominated for 3 Oscars. Another 5 wins & 15 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BNmJhNTgzMWYtZTU5OC00MmE2LTlkN2UtNWE0MmJiNWJmNmZjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-      "Metascore": 87,
       "imdbvating": 7.3,
-      "imdbVotes": "45,297",
-      "imdbID": "tt0110367",
       "mype": "movie",
       "production": "N/A"
     },
@@ -164,10 +143,7 @@
       "country": "South Korea",
       "awards": "Won 1 Golden Globe. Another 119 wins & 179 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg",
-      "metascore": 96,
       "imdbRating": 8.6,
-      "imdbVotes": "128,604",
-      "imdbID": "tt6751668",
       "production": "NEON"
     },
     {
@@ -185,10 +161,7 @@
       "country": "USA",
       "awards": "Nominated for 3 Golden Globes. Another 22 wins & 37 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SX300.jpg",
-      "metascore": 82,
       "imdbRating": 8.1,
-      "imdbVotes": "66,522",
-      "imdbID": "tt8946378",
       "production": "Lionsgate"
     },
     {
@@ -206,11 +179,62 @@
       "country": "USA",
       "awards": "Nominated for 2 Golden Globes. Another 17 wins & 54 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BMzFiYWQxYzgtOThmYi00ZmIwLWFlZWMtMzk2NTI2YTYzMjkyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
-      "metascore": 76,
       "imdbRating": 7.3,
-      "imdbVotes": "31,613",
-      "imdbID": "tt8526872",
       "production": "Netflix"
+    },
+    {
+      "title": "Killers of the Flower Moon",
+      "year": 2023,
+      "released": "14 Aug 2023",
+      "runtime": 206,
+      "genre": "Crime, Drama, History",
+      "director": " Martin Scorsese",
+      "writer": " Eric Roth, Martin Scorsese, David Grann",
+      "actors": "Leonardo DiCaprio, Lily Gladstone",
+      "plot": "When oil is discovered in 1920s Oklahoma under Osage Nation land, the Osage people are murdered one by one - until the FBI steps in to unravel the mystery.",
+      "language": "English",
+      "country": "USA",
+      "awards": "Nominated for 2 Golden Globes.",
+      "poster": "https://avatars.mds.yandex.net/i?id=2a0000018b821dac1abe66497aba6d779c5b-1607718-fast-images&n=13",
+      "imdbRating": 8,
+      "production": "Netflix",
+      "id": 11
+    },
+    {
+      "title": "Gen V",
+      "year": 2023,
+      "released": "06 May 2023",
+      "runtime": 50,
+      "genre": "Action, Adventure, Comedy",
+      "director": "Evan Goldberg",
+      "writer": "Eric Kripke, Craig Rosenberg",
+      "actors": "Jaz Sinclair, Chance Perdomo, Lizze Broadway",
+      "plot": "From the world of \"The Boys\" comes \"Gen V,\" which explores the first generation of superheroes to know that their super powers are from Compound V. These heroes put their physical and moral boundaries to the test competing for the school's top ranking.",
+      "language": "English",
+      "country": "Canada",
+      "awards": "Nominated for 2 Golden Globes.",
+      "poster": "https://www.themoviedb.org/t/p/original/avkFRHOG9ZRqRsiIp4uIpqPS2m3.jpg",
+      "imdbRating": 7.9,
+      "production": "Lionsgate",
+      "id": 12
+    },
+    {
+      "title": "The Shawshank Redemption",
+      "year": 1994,
+      "released": "26 Aug 1994",
+      "runtime": 142,
+      "genre": "Drama",
+      "director": " Frank Darabont",
+      "writer": "Stephen King, Frank Darabont",
+      "actors": "Tim Robbins, Morgan Freeman, Bob Gunton",
+      "plot": "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
+      "language": "English",
+      "country": "USA",
+      "awards": "Nominated for 2 Golden Globes.",
+      "poster": "https://upload.wikimedia.org/wikipedia/tr/e/e6/Esaretin-bedeli.jpg",
+      "imdbRating": 9.3,
+      "production": "IMDB Production",
+      "id": 13
     }
   ]
 }

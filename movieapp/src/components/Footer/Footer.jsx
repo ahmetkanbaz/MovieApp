@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="py-4">
+    <footer className="py-5 border-top">
       <div className="container">
-        <p className="text-center">
+        <p className="text-center mb-0">
           Made by ❤️‍🔥
           <a href="https://github.com/ahmetkanbaz" target="_blank" rel="noreferrer" className="ms-1">
             Ahmet KANBAZ

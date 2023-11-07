@@ -18,7 +18,7 @@ const DetailInfos = ({
   plot,
 }) => {
   return (
-    <div className="col-md-6 col-12">
+    <div className="col-md-6 col-12 order-1 order-md-0">
       <p className="mb-1 text-end fst-italic">
         Release Date: <span className="ms-1">{released}</span>
       </p>
