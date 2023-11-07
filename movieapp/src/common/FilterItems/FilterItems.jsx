@@ -1,7 +1,13 @@
-const FilterItems = ({setSearch}) => {
+/* eslint-disable react/prop-types */
+const FilterItems = ({setSearch, setSort}) => {
 
   const handleSearchValue = (e) => {
     setSearch(e.target.value)
+  }
+
+  const handleSortValue = (e, sortValue) => {
+    setSort(sortValue)
+    e.preventDefault()
   }
 
   return (
@@ -20,12 +26,12 @@ const FilterItems = ({setSearch}) => {
               </button>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#"  onClick={(e) => handleSortValue(e, 'sorta_z')}>
                     A - Z
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#" onClick={(e) => handleSortValue(e, 'sortz_a')}>
                     Z - A
                   </a>
                 </li>
