@@ -5,7 +5,7 @@ export const CustomCard = styled.div`
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   background-color: ${({theme}) => theme == 'light' ? '#F2F2F2' : '#666666'};
   color: ${({theme}) => theme == 'light' ? '#000000' : '#EAEAEA'};
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
   &:hover {
     transform: translateY(-10px);
