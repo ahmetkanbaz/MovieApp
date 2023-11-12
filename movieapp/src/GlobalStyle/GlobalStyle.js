@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const backgroundAndColor = (theme) => {
   return `
     background-color: ${theme == "light" ? "#F5F5F5" : "#333333"};
-    color: ${theme == "light" ? "#000000" : "#F5F5F5"}
+    color: ${theme == "light" ? "#000000" : "#F5F5F5"};
     transition: all .3s ease-in-out;
   `;
 };
@@ -16,8 +16,9 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    
+    ${({ theme }) => backgroundAndColor(theme)}
     font-family: 'Roboto', sans-serif;
+    transition: all .3s ease-in-out;
   }
 
   a {
@@ -25,7 +26,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .thisYear {
-    background-color: #F0F0F0;
+    background-color: ${({theme}) => theme == 'light' ? '#F0F0F0' : '#232323'};
+    transition: all .3s ease-in-out;
   }
 
   ::placeholder {
@@ -54,8 +56,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   footer {
-    background-color: #F0F0F0;
+    background-color: ${({theme}) => theme == 'light' ? '#F0F0F0' : '#121212'};
   }
 `;
-
-// ${({theme}) => backgroundAndColor(theme)}

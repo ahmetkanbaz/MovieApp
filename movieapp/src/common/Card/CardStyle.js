@@ -12,15 +12,16 @@ export const CustomCard = styled.div`
   }
 
   img {
-    height: 120px;
+    height: 150px;
+    border-radius: 12px;
   }
 
   p {
-    font-size: .93rem;
+    font-size: 0.93rem;
     display: -webkit-box;
-      -webkit-line-clamp: 5;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     @media screen and (max-width: 768px) {
       -webkit-line-clamp: 2;
     }
