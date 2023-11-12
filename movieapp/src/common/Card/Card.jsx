@@ -2,11 +2,13 @@ import { CustomCard } from "./CardStyle";
 import PropTypes from 'prop-types'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {useSelector} from 'react-redux'
 
 const Card = ({movie}) => {
   const navigate = useNavigate()
   const {id, title, poster, plot} = movie
   const [loadingImage, setLoadingImage] = useState(false)
+  const theme = useSelector((state) => state.theme.theme)
 
   const handleLoadingImage = () => {
     setLoadingImage(true)
@@ -14,7 +16,7 @@ const Card = ({movie}) => {
   
   return (
     <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-      <CustomCard className="card h-100" onClick={() => navigate(`/allmovies/${id}`)}>
+      <CustomCard className="card h-100" onClick={() => navigate(`/allmovies/${id}`)} theme={theme}>
         {(poster && !loadingImage) ? (
           <img
           src={poster}

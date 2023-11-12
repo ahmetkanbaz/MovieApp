@@ -11,6 +11,7 @@ const AllFilms = () => {
   const [filteredMovies, setFilteredMovies] = useState(movies);
 
   const [search, setSearch] = useState();
+  const [sort, setSort] = useState();
 
   useEffect(() => {
     dispatch(getAllMovies());
@@ -21,18 +22,26 @@ const AllFilms = () => {
 
     if (search) {
       tempMovies = tempMovies.filter((movie) =>
-        movie.title.toLowerCase().includes(search.toLowerCase())
+        movie.title.toLowerCase().includes(search.toLowerCase().trim())
       );
     }
 
-    setFilteredMovies(tempMovies);
-  }, [search, movies.length]);
+    if (sort) {
+      if (sort == "sorta_z") {
+        tempMovies = tempMovies.sort((a, b) => a.title.localeCompare(b.title))
+      }
 
-  console.log(filteredMovies);
+      else if (sort == 'sortz_a') {
+        tempMovies = tempMovies.sort((a, b) => b.title.localeCompare(a.title))
+      }
+    }
+
+    setFilteredMovies(tempMovies);
+  }, [movies.length, search, sort]);
 
   return (
     <>
-      <FilterItems setSearch={setSearch} />
+      <FilterItems setSearch={setSearch} setSort={setSort} />
       <MoviesContainer title="All Films" movies={filteredMovies} />
     </>
   );
