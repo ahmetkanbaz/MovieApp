@@ -26,30 +26,30 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .thisYear {
-    background-color: ${({theme}) => theme == 'light' ? '#F0F0F0' : '#232323'};
+    background-color: ${({ theme }) =>
+      theme == "light" ? "#F0F0F0" : "#232323"};
     transition: all .3s ease-in-out;
   }
 
-  ::placeholder {
-    font-size: .89rem;
-    font-style: italic;
-  }
-
   nav {
-    ${({theme}) => backgroundAndColor(theme)}
+    background-color: ${({ theme }) =>
+      theme == "light" ? "#F0F0F0" : "#232323"};
+    transition: all .3s ease-in-out;
   }
 
   .navbar-brand {
-    color: ${({theme}) => theme == 'light' ? '#000000' : '#F5F5F5'};
+    color: ${({ theme }) => (theme == "light" ? "#000000" : "#F5F5F5")};
     transition: all .3s  ease-in-out;
+    gap: .88rem;
     &:hover {
-      color: ${({theme}) => theme == 'dark' && '#BA49FF'}
+      color: ${({ theme }) => theme == "dark" && "#BA49FF"};
+      gap: 1.1rem;
     }
   }
 
   .nav-link,
   .nav-link > svg {
-    color: ${({theme}) => theme == 'light' ? '#000000' : '#F5F5F5'};
+    color: ${({ theme }) => (theme == "light" ? "#000000" : "#F5F5F5")};
     transition: all .3s ease-in-out;
   }
 
@@ -59,9 +59,18 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .form-control {
+    background-color: ${({ theme }) =>
+      theme == "light" ? "#F0F0F0" : "#3E3E3E"};
+    transition: all .3s ease-in-out;
     &:focus {
       box-shadow: none;
       border: 1px solid #073d87;
+    }
+    &::placeholder {
+      font-size: .89rem;
+      font-style: italic;
+      color: ${({ theme }) => (theme == "light" ? "#101010" : "#E0E0E0")};
+      transition: all .3s ease-in-out;
     }
   }
 
@@ -70,6 +79,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   footer {
-    background-color: ${({theme}) => theme == 'light' ? '#F0F0F0' : '#121212'};
+    background-color: ${({ theme }) =>
+      theme == "light" ? "#F0F0F0" : "#121212"};
   }
 `;

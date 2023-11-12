@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg py-4 sticky-top">
       <div className="container">
-        <Link className="navbar-brand d-flex align-items-center gap-2" to="/">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
           <BiCameraMovie size="2rem" />
           <span>MovieApp</span>
         </Link>
