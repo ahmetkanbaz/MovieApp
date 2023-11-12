@@ -35,12 +35,26 @@ export const GlobalStyle = createGlobalStyle`
     font-style: italic;
   }
 
-  .nav-link {
-    color: #000000;
+  nav {
+    ${({theme}) => backgroundAndColor(theme)}
+  }
+
+  .navbar-brand {
+    color: ${({theme}) => theme == 'light' ? '#000000' : '#F5F5F5'};
+    transition: all .3s  ease-in-out;
+    &:hover {
+      color: ${({theme}) => theme == 'dark' && '#BA49FF'}
+    }
+  }
+
+  .nav-link,
+  .nav-link > svg {
+    color: ${({theme}) => theme == 'light' ? '#000000' : '#F5F5F5'};
     transition: all .3s ease-in-out;
   }
 
-  .nav-link:hover {
+  .nav-link:hover,
+  .nav-link:hover > svg {
     color: #BA49FF;
   }
 
