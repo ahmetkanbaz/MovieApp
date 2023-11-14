@@ -40,12 +40,12 @@ const Card = ({ movie, isAllMovies }) => {
           <h5 className="card-title fw-semibold">{title}</h5>
           <p className="card-text">{plot}</p>
           {isAllMovies && (
-            <div className="position-absolute start-0 bottom-0 d-flex justify-content-around pb-1 w-100">
+            <div className="position-absolute start-0 bottom-0 d-flex justify-content-around pb-1 w-100 icons">
               <a href="#">
-                <MdFavorite />
+                <MdFavorite size='1.2rem'/>
               </a>
               <a href="#">
-                <MdDelete />
+                <MdDelete size='1.2rem'/>
               </a>
             </div>
           )}

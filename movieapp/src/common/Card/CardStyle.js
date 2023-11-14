@@ -27,4 +27,20 @@ export const CustomCard = styled.div`
       -webkit-line-clamp: 2;
     }
   }
+  a {
+    color: ${({theme}) => theme == 'light' ? '#232323' : '#F5F5F5'};
+    transition: all .3s ease-in-out;
+    &:nth-child(1 ) {
+      color: #FF0000;
+      &:hover {
+        color: #F828FB;
+      }
+    }
+    &:nth-child(2) {
+      color: #0000FF;
+      &:hover {
+        color: #28DEFB;
+      }
+    }
+  }
 `;
