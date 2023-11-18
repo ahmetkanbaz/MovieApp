@@ -1,49 +1,80 @@
 import { CustomCard } from "./CardStyle";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {useSelector} from 'react-redux'
+import { useDispatch, useSelector } from "react-redux";
+import { MdFavorite, MdDelete } from "react-icons/md";
+import { deleteMovie } from "../../utils/deletes";
+import { getAllMovies } from "../../utils/requests";
 
-const Card = ({movie}) => {
-  const navigate = useNavigate()
-  const {id, title, poster, plot} = movie
-  const [loadingImage, setLoadingImage] = useState(false)
-  const theme = useSelector((state) => state.theme.theme)
+const Card = ({ movie, isAllMovies }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { id, title, poster, plot } = movie;
+  const [loadingImage, setLoadingImage] = useState(false);
+  const theme = useSelector((state) => state.theme.theme);
 
   const handleLoadingImage = () => {
-    setLoadingImage(true)
-  }
-  
+    setLoadingImage(true);
+  };
+
+  const handleDeleteMovie = async (e) => {
+    e.preventDefault();
+    if (
+      window.confirm(`Are you sure you want to delete the movie with id ${id}?`)
+    ) {
+      const item =
+        e.target.parentElement.parentElement.parentElement.parentElement
+          .parentElement;
+      item.remove();
+      const response = await deleteMovie(id);
+      console.log(response);
+      dispatch(getAllMovies())
+    }
+  };
   return (
-    <div className="col-lg-2 col-md-3 col-sm-4 col-6">
-      <CustomCard className="card h-100" onClick={() => navigate(`/allmovies/${id}`)} theme={theme}>
-        {(poster && !loadingImage) ? (
-          <img
-          src={poster}
-          className="card-img-top object-fit-cover"
-          alt={title}
-          onError={handleLoadingImage}
-        />
-        ) : (
-          <img
-          src='https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-          className="card-img-top object-fit-cover"
-          alt={title}
-        />
-        )}
-        <div className="card-body">
-          <h5 className="card-title fw-semibold">{title}</h5>
-          <p className="card-text mb-2">
-            {plot}
-          </p>
+    <div className="col-lg-2 col-md-3 col-sm-4 col-6" id={id}>
+      <CustomCard className="card h-100 position-relative" theme={theme}>
+        <div onClick={() => navigate(`/allmovies/${id}`)}>
+          {poster && !loadingImage ? (
+            <img
+              src={poster}
+              className="card-img-top object-fit-cover"
+              alt={title}
+              onError={handleLoadingImage}
+            />
+          ) : (
+            <img
+              src="https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="card-img-top object-fit-cover"
+              alt={title}
+            />
+          )}
+          <div className="card-body">
+            <h5 className="card-title fw-semibold">{title}</h5>
+            <p className="card-text">{plot}</p>
+          </div>
         </div>
+        {isAllMovies && (
+          <div className="pt-2">
+            <div className="position-absolute start-0 bottom-0 d-flex justify-content-around pb-1 w-100 icons">
+              <a href="#">
+                <MdFavorite size="1.2rem" />
+              </a>
+              <a href="#" onClick={(e) => handleDeleteMovie(e)}>
+                <MdDelete size="1.2rem" />
+              </a>
+            </div>
+          </div>
+        )}
       </CustomCard>
     </div>
   );
 };
 
 Card.propTypes = {
-  movie: PropTypes.object
-}
+  movie: PropTypes.object,
+  isAllMovies: PropTypes.bool,
+};
 
 export default Card;
