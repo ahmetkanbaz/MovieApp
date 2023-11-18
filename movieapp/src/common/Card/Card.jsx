@@ -2,14 +2,11 @@ import { CustomCard } from "./CardStyle";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { MdFavorite, MdDelete } from "react-icons/md";
-import { deleteMovie } from "../../utils/deletes";
-import { getAllMovies } from "../../utils/requests";
+import { useSelector } from "react-redux";
+import CardIcons from "./CardIcons/CardIcons";
 
 const Card = ({ movie, isAllMovies }) => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const { id, title, poster, plot } = movie;
   const [loadingImage, setLoadingImage] = useState(false);
   const theme = useSelector((state) => state.theme.theme);
@@ -18,20 +15,6 @@ const Card = ({ movie, isAllMovies }) => {
     setLoadingImage(true);
   };
 
-  const handleDeleteMovie = async (e) => {
-    e.preventDefault();
-    if (
-      window.confirm(`Are you sure you want to delete the movie with id ${id}?`)
-    ) {
-      const item =
-        e.target.parentElement.parentElement.parentElement.parentElement
-          .parentElement;
-      item.remove();
-      const response = await deleteMovie(id);
-      console.log(response);
-      dispatch(getAllMovies())
-    }
-  };
   return (
     <div className="col-lg-2 col-md-3 col-sm-4 col-6" id={id}>
       <CustomCard className="card h-100 position-relative" theme={theme}>
@@ -55,18 +38,7 @@ const Card = ({ movie, isAllMovies }) => {
             <p className="card-text">{plot}</p>
           </div>
         </div>
-        {isAllMovies && (
-          <div className="pt-2">
-            <div className="position-absolute start-0 bottom-0 d-flex justify-content-around pb-1 w-100 icons">
-              <a href="#">
-                <MdFavorite size="1.2rem" />
-              </a>
-              <a href="#" onClick={(e) => handleDeleteMovie(e)}>
-                <MdDelete size="1.2rem" />
-              </a>
-            </div>
-          </div>
-        )}
+        <CardIcons id={id} isAllMovies = {isAllMovies}/>
       </CustomCard>
     </div>
   );
