@@ -3,6 +3,7 @@ import DirectorAndWriter from "./DirectorAndWriter/DirectorAndWriter";
 import DetailList from "./DetailList/DetailList";
 import LabelValue from "../../../common/LabelValue/LabelValue";
 import LanguageCountry from "./LanguageCountry/LanguageCountry";
+import UpdateModal from "../../../common/UpdateModal/UpdateModal";
 const DetailInfos = ({
   released,
   language,
@@ -41,6 +42,11 @@ const DetailInfos = ({
       </div>
 
       <DirectorAndWriter writer={writer} director={director} />
+
+      <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Update Movie
+</button>
+<UpdateModal />
     </div>
   );
 };
