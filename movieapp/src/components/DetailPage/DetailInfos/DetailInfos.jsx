@@ -43,10 +43,15 @@ const DetailInfos = ({
 
       <DirectorAndWriter writer={writer} director={director} />
 
-      <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Update Movie
-</button>
-<UpdateModal />
+      <button
+        type="button"
+        className="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#updateMovieModal"
+      >
+        Update Movie
+      </button>
+      <UpdateModal />
     </div>
   );
 };
