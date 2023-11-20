@@ -38,7 +38,7 @@ const Card = ({ movie, isAllMovies }) => {
             <p className="card-text">{plot}</p>
           </div>
         </div>
-        <CardIcons id={id} isAllMovies = {isAllMovies}/>
+        <CardIcons id={id} title = {title} isAllMovies = {isAllMovies}/>
       </CustomCard>
     </div>
   );
