@@ -48,4 +48,7 @@ export const CustomCard = styled.div`
       }
     }
   }
+  .favouriteMovie {
+      color: #f828fb !important;
+    }
 `;
