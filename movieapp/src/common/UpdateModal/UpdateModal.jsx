@@ -1,7 +1,10 @@
+import PropTypes from 'prop-types'
 import {useSelector} from 'react-redux'
 import { UpdateModalWrapper } from './UpdateModalStyle'
 const UpdateModal = ({movie}) => {
   const theme = useSelector((state) => state.theme.theme)
+
+  console.log(movie)
 
   return (
     <UpdateModalWrapper theme={theme}>
@@ -24,6 +27,10 @@ const UpdateModal = ({movie}) => {
 </div>
     </UpdateModalWrapper>
   )
+}
+
+UpdateModal.propTypes = {
+  movie: PropTypes.object
 }
 
 export default UpdateModal
