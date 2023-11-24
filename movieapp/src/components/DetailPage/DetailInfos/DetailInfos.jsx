@@ -3,7 +3,7 @@ import DirectorAndWriter from "./DirectorAndWriter/DirectorAndWriter";
 import DetailList from "./DetailList/DetailList";
 import LabelValue from "../../../common/LabelValue/LabelValue";
 import LanguageCountry from "./LanguageCountry/LanguageCountry";
-import UpdateModal from "../../../common/UpdateModal/UpdateModal";
+import UpdateModal from "../../UpdateModal/UpdateModal";
 const DetailInfos = ({ singleMovie }) => {
   const {
     released,
@@ -52,7 +52,7 @@ const DetailInfos = ({ singleMovie }) => {
       >
         Update Movie
       </button>
-      <UpdateModal movie={singleMovie} />
+      <UpdateModal movie = {singleMovie} />
     </div>
   );
 };

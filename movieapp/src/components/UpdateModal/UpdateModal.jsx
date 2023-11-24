@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { UpdateModalWrapper } from "./UpdateModalStyle";
+import UpdateTitleYear from "./UpdateTitleYear/UpdateTitleYear";
+import { useFormik } from "formik";
+import ModalButtons from "./ModalButtons/ModalButtons";
+
 const UpdateModal = ({ movie }) => {
   const theme = useSelector((state) => state.theme.theme);
 
@@ -22,6 +26,40 @@ const UpdateModal = ({ movie }) => {
     production,
   } = movie || {};
 
+  const {
+    handleSubmit,
+    handleChange,
+    handleBlur,
+    handleReset,
+    values,
+    errors,
+    isSubmitting,
+    touched,
+  } = useFormik({
+    initialValues: {
+      title,
+      year,
+      released,
+      runtime,
+      genre,
+      director,
+      writer,
+      actors,
+      plot,
+      language,
+      country,
+      awards,
+      poster,
+      imdbRating,
+      production,
+    },
+    onSubmit: async (values, bag) => {
+      console.log(values);
+      bag.setSubmitting(false);
+      bag.resetForm();
+    },
+  });
+
   return (
     <UpdateModalWrapper theme={theme}>
       <div
@@ -31,7 +69,7 @@ const UpdateModal = ({ movie }) => {
         aria-labelledby="updateMovieModal"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="updateMovieModal">
@@ -45,24 +83,15 @@ const UpdateModal = ({ movie }) => {
               ></button>
             </div>
             <div className="modal-body">
-              <form>
-                <div className="mb-3">
-                  <label htmlFor="title" className="form-label">Title</label>
-                  <input type="text" id="title" name="title" className="form-control" defaultValue={title}/>
-                </div>
+              <form onSubmit={handleSubmit}>
+                <UpdateTitleYear
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                  values={values}
+                  isSubmitting={isSubmitting}
+                />
+                <ModalButtons handleReset={handleReset} />
               </form>
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" className="btn btn-primary">
-                Save changes
-              </button>
             </div>
           </div>
         </div>
