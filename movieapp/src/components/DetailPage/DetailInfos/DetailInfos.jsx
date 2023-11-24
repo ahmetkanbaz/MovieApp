@@ -21,28 +21,34 @@ const DetailInfos = ({ singleMovie }) => {
   } = singleMovie;
   return (
     <div className="col-md-6 col-12 order-1 order-md-0">
-      <p className="mb-1 text-end fst-italic">
+      {released && (
+        <p className="mb-1 text-end fst-italic">
         Release Date: <span className="ms-1">{released}</span>
       </p>
-      <LabelValue title="IMDB Score" value={imdbRating} />
+      )}
+      {imdbRating && (
+        <LabelValue title="IMDB Score" value={imdbRating} />
+      )}
 
-      <p className="mt-3">{plot}</p>
+      {plot && <p className="mt-3">{plot}</p>}
 
-      <LabelValue title="Movie Duration" value={runtime} />
+      {runtime && <LabelValue title="Movie Duration" value={runtime} />}
 
-      <DetailList title="Genres" listOfDetail={genre} />
+      {genre && <DetailList title="Genres" listOfDetail={genre} />}
 
-      <DetailList title="Actors" listOfDetail={actors} />
+      {actors && <DetailList title="Actors" listOfDetail={actors} />}
 
-      <DetailList title="Awards" listOfDetail={awards} />
+      {awards && <DetailList title="Awards" listOfDetail={awards} />}
 
-      <LanguageCountry language={language} country={country} />
+      {(language || country) && <LanguageCountry language={language} country={country} />}
 
-      <div className="d-flex justify-content-center mb-2">
+      {
+        production && <div className="d-flex justify-content-center mb-2">
         <LabelValue title="Production" value={production} />
       </div>
+      }
 
-      <DirectorAndWriter writer={writer} director={director} />
+      {(director || writer) && <DirectorAndWriter writer={writer} director={director} />}
 
       <button
         type="button"

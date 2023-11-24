@@ -55,8 +55,8 @@ const UpdateModal = ({ movie }) => {
     },
     onSubmit: async (values, bag) => {
       console.log(values);
-      bag.setSubmitting(false);
-      bag.resetForm();
+      // bag.setSubmitting(false);
+      // bag.resetForm();
     },
   });
 
