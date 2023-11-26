@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const ModalButtons = ({ handleReset }) => {
   return (
-    <div className="modal-footer">
+    <div className="modal-footer pb-0">
       <button
         className="btn btn-secondary"
         onClick={handleReset}

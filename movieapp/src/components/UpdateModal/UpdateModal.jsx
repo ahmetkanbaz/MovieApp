@@ -4,6 +4,9 @@ import { UpdateModalWrapper } from "./UpdateModalStyle";
 import UpdateTitleYear from "./UpdateTitleYear/UpdateTitleYear";
 import { useFormik } from "formik";
 import ModalButtons from "./ModalButtons/ModalButtons";
+import UpdateReleasedRuntime from "./UpdateReleasedRuntime/UpdateReleasedRuntime";
+import LabelInput from "../../common/LabelInput/LabelInput";
+import UpdateDirectorWriter from "./UpdateDirectorWriter/UpdateDirectorWriter";
 
 const UpdateModal = ({ movie }) => {
   const theme = useSelector((state) => state.theme.theme);
@@ -55,6 +58,8 @@ const UpdateModal = ({ movie }) => {
     },
     onSubmit: async (values, bag) => {
       console.log(values);
+
+      document.getElementById("closeModal").click();
       // bag.setSubmitting(false);
       // bag.resetForm();
     },
@@ -80,11 +85,36 @@ const UpdateModal = ({ movie }) => {
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                id="closeModal"
               ></button>
             </div>
             <div className="modal-body">
               <form onSubmit={handleSubmit}>
                 <UpdateTitleYear
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                  values={values}
+                  isSubmitting={isSubmitting}
+                />
+                <UpdateReleasedRuntime
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                  values={values}
+                  isSubmitting={isSubmitting}
+                />
+
+                <LabelInput
+                  labelTitle="Genre"
+                  type="text"
+                  id="genre"
+                  name="genre"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  disabled={isSubmitting}
+                  defaultValue={values.genre}
+                />
+
+                <UpdateDirectorWriter
                   handleChange={handleChange}
                   handleBlur={handleBlur}
                   values={values}
