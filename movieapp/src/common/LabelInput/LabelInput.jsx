@@ -10,6 +10,7 @@ const LabelInput = ({
   placeholder,
   disabled,
   inputClassName,
+  defaultValue
 }) => {
   return (
     <div className="position-relative mb-4">
@@ -26,6 +27,7 @@ const LabelInput = ({
         placeholder={placeholder}
         disabled={disabled}
         className={`form-control ${inputClassName}`}
+        defaultValue={defaultValue}
       />
     </div>
   );

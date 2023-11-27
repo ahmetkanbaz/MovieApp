@@ -52,7 +52,6 @@
       "awards": "4 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU0NDE5NTU0OV5BMl5BanBnXkFtZTcwMzI1OTMzOQ@@._V1_SX300.jpg",
       "imdbRating": 6.4,
-      "boxOffice": "$49,300,000",
       "production": "Paramount Studios"
     },
     {
@@ -235,6 +234,24 @@
       "imdbRating": 9.3,
       "production": "IMDB Production",
       "id": 13
+    },
+    {
+      "title": "",
+      "year": "",
+      "released": "",
+      "runtime": "",
+      "genre": "",
+      "director": "",
+      "writer": "",
+      "actors": "",
+      "plot": "",
+      "language": "dasdadasd",
+      "country": "",
+      "awards": "",
+      "poster": "",
+      "imdbRating": "",
+      "production": "",
+      "id": 14
     }
   ]
 }

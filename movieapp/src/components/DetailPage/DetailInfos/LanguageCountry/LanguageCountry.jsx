@@ -4,12 +4,16 @@ import LabelValue from "../../../../common/LabelValue/LabelValue";
 const LanguageCountry = ({ language, country }) => {
   return (
     <div className="d-flex justify-content-evenly flex-wrap my-4">
-      <div>
-        <LabelValue title="Language" value={language} />
-      </div>
-      <div>
-        <LabelValue title="Country" value={country} />
-      </div>
+      {language && (
+        <div>
+          <LabelValue title="Language" value={language} />
+        </div>
+      )}
+      {country && (
+        <div>
+          <LabelValue title="Country" value={country} />
+        </div>
+      )}
     </div>
   );
 };

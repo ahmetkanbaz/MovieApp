@@ -26,22 +26,7 @@ const DetailMovie = () => {
     return <NotFoundMovie />;
   }
 
-  const {
-    title,
-    released,
-    runtime,
-    genre,
-    director,
-    writer,
-    actors,
-    plot,
-    language,
-    country,
-    awards,
-    poster,
-    imdbRating,
-    production,
-  } = singleMovie || {};
+  const { title, poster } = singleMovie || {};
 
   return (
     <section className="py-5">
@@ -53,20 +38,7 @@ const DetailMovie = () => {
             <UpperSection title={title} />
             <div>
               <div className="row">
-                <DetailInfos
-                  released={released}
-                  genre={genre}
-                  language = {language}
-                  country = {country}
-                  runtime={runtime}
-                  writer={writer}
-                  director={director}
-                  actors = {actors}
-                  production={production}
-                  imdbRating={imdbRating}
-                  awards={awards}
-                  plot={plot}
-                />
+                <DetailInfos singleMovie={singleMovie} title = {title} poster = {poster} />
                 <DetailImage title={title} poster={poster} />
               </div>
             </div>
