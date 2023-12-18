@@ -85,7 +85,7 @@ const AddNewMovieForm = ({
               onChange={handleChange}
               onBlur={handleBlur}
               disabled={isSubmitting}
-            ></textarea>
+            />
           </div>
 
           <MovieLanguageCountry
