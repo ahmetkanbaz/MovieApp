@@ -37,7 +37,6 @@
       "production": "1091"
     },
     {
-      "id": 3,
       "title": "Pain & Gain",
       "year": 2013,
       "released": "26 Apr 2013",
@@ -52,7 +51,8 @@
       "awards": "4 nominations.",
       "poster": "https://m.media-amazon.com/images/M/MV5BMTU0NDE5NTU0OV5BMl5BanBnXkFtZTcwMzI1OTMzOQ@@._V1_SX300.jpg",
       "imdbRating": 6.4,
-      "production": "Paramount Studios"
+      "production": "Paramount Studios",
+      "id": 3
     },
     {
       "id": 4,
@@ -234,24 +234,6 @@
       "imdbRating": 9.3,
       "production": "IMDB Production",
       "id": 13
-    },
-    {
-      "title": "",
-      "year": "",
-      "released": "",
-      "runtime": "",
-      "genre": "",
-      "director": "",
-      "writer": "",
-      "actors": "",
-      "plot": "",
-      "language": "dasdadasd",
-      "country": "",
-      "awards": "",
-      "poster": "",
-      "imdbRating": "",
-      "production": "",
-      "id": 14
     }
   ]
 }

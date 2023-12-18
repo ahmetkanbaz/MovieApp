@@ -7,8 +7,14 @@ import ModalButtons from "./ModalButtons/ModalButtons";
 import UpdateReleasedRuntime from "./UpdateReleasedRuntime/UpdateReleasedRuntime";
 import LabelInput from "../../common/LabelInput/LabelInput";
 import UpdateDirectorWriter from "./UpdateDirectorWriter/UpdateDirectorWriter";
+import UpdateLanguageCountry from "./UpdateLanguageCountry/UpdateLanguageCountry";
+import UpdateAwardsPoster from "./UpdateAwardsPoster/UpdateAwardsPoster";
+import UpdateImdbProduction from "./UpdateImdbProduction/UpdateImdbProduction";
+import { updateMovie } from "../../utils/puts";
+import { useParams } from "react-router-dom";
 
-const UpdateModal = ({ movie }) => {
+const UpdateModal = ({ movie, setSingleMovie }) => {
+  const {id} = useParams()
   const theme = useSelector((state) => state.theme.theme);
 
   const {
@@ -33,7 +39,6 @@ const UpdateModal = ({ movie }) => {
     handleSubmit,
     handleChange,
     handleBlur,
-    handleReset,
     values,
     errors,
     isSubmitting,
@@ -57,11 +62,15 @@ const UpdateModal = ({ movie }) => {
       production,
     },
     onSubmit: async (values, bag) => {
-      console.log(values);
-
+      const response = await updateMovie(id, values)
+      if (!response.error) {
+        setSingleMovie(values)
+      }
+      else {
+        console.log(response.message)
+      }
       document.getElementById("closeModal").click();
-      // bag.setSubmitting(false);
-      // bag.resetForm();
+      bag.setSubmitting(false);
     },
   });
 
@@ -120,9 +129,58 @@ const UpdateModal = ({ movie }) => {
                   values={values}
                   isSubmitting={isSubmitting}
                 />
-                <ModalButtons handleReset={handleReset} />
+
+                <LabelInput
+                  labelTitle="Actors"
+                  type="text"
+                  id="actors"
+                  name="actors"
+                  defaultValue={values.actors}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  placeholder="Enter the actors in the movie. If more than one, separate with ','..."
+                  disabled={isSubmitting}
+                />
+                <div className="d-flex flex-column position-relative mb-4">
+                  <label htmlFor="plot" className="form-label">
+                    Content
+                  </label>
+                  <textarea
+                    name="plot"
+                    id="plot"
+                    rows="5"
+                    defaultValue={values.plot}
+                    className="form-control"
+                    placeholder="Enter a brief description of the movie..."
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    disabled={isSubmitting}
+                  />
+                </div>
+
+                <UpdateLanguageCountry
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                  values={values}
+                  isSubmitting={isSubmitting}
+                />
+
+                <UpdateAwardsPoster
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                  values={values}
+                  isSubmitting={isSubmitting}
+                />
+
+                <UpdateImdbProduction
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                  values={values}
+                  isSubmitting={isSubmitting}
+                />
               </form>
             </div>
+            <ModalButtons handleSubmit={handleSubmit} />
           </div>
         </div>
       </div>
@@ -132,6 +190,7 @@ const UpdateModal = ({ movie }) => {
 
 UpdateModal.propTypes = {
   movie: PropTypes.object,
+  setSingleMovie: PropTypes.func
 };
 
 export default UpdateModal;

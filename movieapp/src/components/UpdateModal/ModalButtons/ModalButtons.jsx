@@ -1,14 +1,10 @@
 /* eslint-disable react/prop-types */
-const ModalButtons = ({ handleReset }) => {
+const ModalButtons = ({ handleSubmit }) => {
   return (
     <div className="modal-footer pb-0">
-      <button
-        className="btn btn-secondary"
-        onClick={handleReset}
-      >
-        Reset Form
+      <button className="btn btn-primary" onClick={handleSubmit} type="submit">
+        Save changes
       </button>
-      <button className="btn btn-primary">Save changes</button>
     </div>
   );
 };
