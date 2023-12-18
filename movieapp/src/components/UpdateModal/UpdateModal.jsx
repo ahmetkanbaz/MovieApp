@@ -120,9 +120,9 @@ const UpdateModal = ({ movie }) => {
                   values={values}
                   isSubmitting={isSubmitting}
                 />
-                <ModalButtons handleReset={handleReset} />
               </form>
             </div>
+            <ModalButtons handleSubmit={handleSubmit} />
           </div>
         </div>
       </div>
