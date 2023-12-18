@@ -4,7 +4,7 @@ import DetailList from "./DetailList/DetailList";
 import LabelValue from "../../../common/LabelValue/LabelValue";
 import LanguageCountry from "./LanguageCountry/LanguageCountry";
 import UpdateModal from "../../UpdateModal/UpdateModal";
-const DetailInfos = ({ singleMovie }) => {
+const DetailInfos = ({ singleMovie, setSingleMovie }) => {
   const {
     released,
     language,
@@ -58,7 +58,7 @@ const DetailInfos = ({ singleMovie }) => {
       >
         Update Movie
       </button>
-      <UpdateModal movie = {singleMovie} />
+      <UpdateModal movie = {singleMovie} setSingleMovie = {setSingleMovie}/>
     </div>
   );
 };

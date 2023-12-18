@@ -11,12 +11,13 @@ import UpdateLanguageCountry from "./UpdateLanguageCountry/UpdateLanguageCountry
 import UpdateAwardsPoster from "./UpdateAwardsPoster/UpdateAwardsPoster";
 import UpdateImdbProduction from "./UpdateImdbProduction/UpdateImdbProduction";
 import { updateMovie } from "../../utils/puts";
+import { useParams } from "react-router-dom";
 
-const UpdateModal = ({ movie }) => {
+const UpdateModal = ({ movie, setSingleMovie }) => {
+  const {id} = useParams()
   const theme = useSelector((state) => state.theme.theme);
 
   const {
-    id,
     title,
     year,
     released,
@@ -62,7 +63,12 @@ const UpdateModal = ({ movie }) => {
     },
     onSubmit: async (values, bag) => {
       const response = await updateMovie(id, values)
-      console.log(response)
+      if (!response.error) {
+        setSingleMovie(values)
+      }
+      else {
+        console.log(response.message)
+      }
       document.getElementById("closeModal").click();
       bag.setSubmitting(false);
     },
@@ -184,6 +190,7 @@ const UpdateModal = ({ movie }) => {
 
 UpdateModal.propTypes = {
   movie: PropTypes.object,
+  setSingleMovie: PropTypes.func
 };
 
 export default UpdateModal;

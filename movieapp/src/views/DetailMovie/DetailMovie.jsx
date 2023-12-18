@@ -38,7 +38,7 @@ const DetailMovie = () => {
             <UpperSection title={title} />
             <div>
               <div className="row">
-                <DetailInfos singleMovie={singleMovie} title = {title} poster = {poster} />
+                <DetailInfos singleMovie={singleMovie} title = {title} poster = {poster} setSingleMovie = {setSingleMovie}/>
                 <DetailImage title={title} poster={poster} />
               </div>
             </div>
