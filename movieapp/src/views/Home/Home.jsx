@@ -1,24 +1,29 @@
 import Banner from "../../common/Banner/Banner";
-import Movies from "../../common/Movies/Movies";
-import UpperSection from "../../common/UpperSection/UpperSection";
-import DetailMovie from "../../components/DetailMovie/DetailMovie";
+import MoviesContainer from "../../common/MoviesContainer/MoviesContainer";
+import {useDispatch, useSelector} from 'react-redux'
+import {useEffect} from 'react'
+import { getAllMovies } from "../../utils/requests";
 
 const Home = () => {
+  const dispatch = useDispatch()
+  const movies = useSelector((state) => state.movies.movies)
+
+  const latestMovies = [...movies].sort((a, b) => new Date(b.released) - new Date(a.released)).slice(0, 6)
+  const hightRating = [...movies].sort((a, b) => b.imdbRating - a.imdbRating).slice(0, 6)
+
+  useEffect(() => {
+    dispatch(getAllMovies())
+  }, [])
+
   return (
     <>
       <Banner
-        title="Anasayfa"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
-              illum placeat molestiae quaerat vero! Placeat aperiam provident
-              eius saepe vel!"
+        title="Discover Your Cinema, Watch Your Dreams"
+        content="Every Movie, A New Adventure"
         imageUrl="https://plus.unsplash.com/premium_photo-1682125771198-f7cbed7cb868?auto=format&fit=crop&q=80&w=2060&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
-      <div className="py-5 thisYear">
-        <div className="container">
-          <UpperSection title="En Yeni Filmler" />
-          <Movies />
-        </div>
-      </div>
+      <MoviesContainer className = 'thisYear' title='Latest Movies' movies={latestMovies} />
+      <MoviesContainer title='Movies with the Highest Ratings' movies={hightRating} />
     </>
   );
 };
