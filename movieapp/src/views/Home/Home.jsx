@@ -3,6 +3,7 @@ import MoviesContainer from "../../common/MoviesContainer/MoviesContainer";
 import {useDispatch, useSelector} from 'react-redux'
 import {useEffect} from 'react'
 import { getAllMovies } from "../../utils/requests";
+import PopularActors from "../../components/PopularActors/PopularActors";
 
 const Home = () => {
   const dispatch = useDispatch()
@@ -23,6 +24,7 @@ const Home = () => {
         imageUrl="https://plus.unsplash.com/premium_photo-1682125771198-f7cbed7cb868?auto=format&fit=crop&q=80&w=2060&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
       <MoviesContainer className = 'thisYear' title='Latest Movies' movies={latestMovies} />
+      <PopularActors />
       <MoviesContainer title='Movies with the Highest Ratings' movies={hightRating} />
     </>
   );

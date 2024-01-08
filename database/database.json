@@ -235,5 +235,43 @@
       "production": "IMDB Production",
       "id": 13
     }
+  ],
+  "actors": [
+    {
+      "id": 1,
+      "name": "Leonardo DiCaprio",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Leonardo_Dicaprio_Cannes_2019.jpg/330px-Leonardo_Dicaprio_Cannes_2019.jpg",
+      "linkTarget": "https://tr.wikipedia.org/wiki/Leonardo_DiCaprio"
+    },
+    {
+      "id": 2,
+      "name": "Charlize Theron",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Charlize-theron-IMG_6045.jpg/330px-Charlize-theron-IMG_6045.jpg",
+      "linkTarget": "https://en.wikipedia.org/wiki/Charlize_Theron"
+    },
+    {
+      "id": 3,
+      "name": "Dwayne Johnson",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg/330px-Dwayne_%22The_Rock%22_Johnson_Visits_the_Pentagon_%2841%29_%28cropped%29.jpg",
+      "linkTarget": "https://en.wikipedia.org/wiki/Dwayne_Johnson"
+    },
+    {
+      "id": 4,
+      "name": "Jennifer Lawrence",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Jennifer_Lawrence_in_2016.jpg/800px-Jennifer_Lawrence_in_2016.jpg",
+      "linkTarget": "https://en.wikipedia.org/wiki/Jennifer_Lawrence"
+    },
+    {
+      "id": 5,
+      "name": "Tom Cruise",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Tom_Cruise_by_Gage_Skidmore_2.jpg/330px-Tom_Cruise_by_Gage_Skidmore_2.jpg",
+      "linkTarget": "https://en.wikipedia.org/wiki/Tom_Cruise"
+    },
+    {
+      "id": 6,
+      "name": "Scarlett Johansson",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg/330px-Scarlett_Johansson_by_Gage_Skidmore_2_%28cropped%2C_2%29.jpg",
+      "linkTarget": "https://tr.wikipedia.org/wiki/Scarlett_Johansson"
+    }
   ]
 }
