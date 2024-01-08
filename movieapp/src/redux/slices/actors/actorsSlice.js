@@ -10,20 +10,20 @@ const actorsSlice = createSlice({
   name: 'actors',
   initialState,
   reducers: {
-    setLoading: (state) => {
+    setActorLoading: (state) => {
       state.loading = true
     },
     setActors: (state, action) => {
       state.loading = false
       state.actors = action.payload
     },
-    setError: (state, action) => {
+    setActorError: (state, action) => {
       state.loading = false
       state.error = action.payload
     }
   }
 })
 
-export const {setLoading, setActors, setError} = actorsSlice.actions
+export const {setActorLoading, setActors, setActorError} = actorsSlice.actions
 
 export default actorsSlice.reducer
