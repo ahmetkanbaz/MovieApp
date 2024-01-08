@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getAllMovies } from "../../utils/requests";
 import PopularActors from "../../components/PopularActors/PopularActors";
+import AboutMovies from "../../components/AboutMovies/AboutMovies";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -32,12 +33,13 @@ const Home = () => {
         title="Latest Movies"
         movies={latestMovies}
       />
-      <PopularActors />
+      <AboutMovies />
       <MoviesContainer
         className="homeMovies"
         title="Movies with the Highest Ratings"
         movies={hightRating}
       />
+      <PopularActors />
     </>
   );
 };
