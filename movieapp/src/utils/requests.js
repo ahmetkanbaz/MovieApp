@@ -5,6 +5,8 @@ import {
   setError,
 } from "../redux/slices/movies/moviesSlice";
 
+import { setActorLoading, setActors, setActorError } from "../redux/slices/actors/actorsSlice";
+
 const baseUrl = import.meta.env.VITE_BASE_URL
 
 
@@ -25,5 +27,16 @@ export const getSingleMovie = async (id) => {
   }
   catch (error) {
     return error.message
+  }
+}
+
+export const getAllActors = () => async (dispatch) => {
+  dispatch(setActorLoading)
+  try {
+    const response = await axios.get(`${baseUrl}/actors`)
+    dispatch(setActors(response.data))
+  }
+  catch (error) {
+    setActorError(error.message)
   }
 }

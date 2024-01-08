@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+const bgColor = "#E7E7E7"
+
 const backgroundAndColor = (theme) => {
   return `
     background-color: ${theme == "light" ? "#F5F5F5" : "#333333"};
@@ -25,15 +27,20 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
-  .thisYear {
+  .homeMovies {
     background-color: ${({ theme }) =>
       theme == "light" ? "#F0F0F0" : "#232323"};
     transition: all .3s ease-in-out;
   }
 
+  .popularActors {
+    background-color: ${({theme}) => theme == 'light' ? '#F7F7F7' : '#101010'};
+    transition: all .3s ease-in-out;
+  }
+
   nav {
     background-color: ${({ theme }) =>
-      theme == "light" ? "#F0F0F0" : "#232323"};
+      theme == "light" ? bgColor : "#232323"};
     transition: all .3s ease-in-out;
   }
 
@@ -80,6 +87,6 @@ export const GlobalStyle = createGlobalStyle`
 
   footer {
     background-color: ${({ theme }) =>
-      theme == "light" ? "#F0F0F0" : "#121212"};
+      theme == "light" ? bgColor : "#121212"};
   }
 `;
