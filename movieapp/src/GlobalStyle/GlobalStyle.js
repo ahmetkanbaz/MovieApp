@@ -31,6 +31,11 @@ export const GlobalStyle = createGlobalStyle`
     transition: all .3s ease-in-out;
   }
 
+  .popularActors {
+    background-color: ${({theme}) => theme == 'light' ? '#F3F3F3' : '#101010'};
+    transition: all .3s ease-in-out;
+  }
+
   nav {
     background-color: ${({ theme }) =>
       theme == "light" ? "#F0F0F0" : "#232323"};
