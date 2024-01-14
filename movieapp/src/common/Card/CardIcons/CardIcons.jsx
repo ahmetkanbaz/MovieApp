@@ -3,10 +3,12 @@ import { MdFavorite, MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { deleteMovie } from "../../../utils/deletes";
 import { getAllMovies } from "../../../utils/requests";
+import { useState } from "react";
 
 const CardIcons = ({ id, title, isAllMovies }) => {
   const dispatch = useDispatch();
-  const localMovies = JSON.parse(localStorage.getItem("favouriteMovies")) || [];
+  const [favouriteMovies, setFavouriteMovies] = useState(JSON.parse(localStorage.getItem('favouriteMovies')) || [])
+
 
   const handleDeleteMovie = async (e) => {
     e.preventDefault();
@@ -19,21 +21,11 @@ const CardIcons = ({ id, title, isAllMovies }) => {
 
   const handleAddMovie4LocalStorage = (e) => {
     e.preventDefault();
-
-    try {
-      if (!localMovies.includes(id)) {
-        localStorage.setItem(
-          "favouriteMovies",
-          JSON.stringify([...localMovies, id])
-        );
-        console.log("Movie Add Locale Storage");
-      } else {
-        console.log("This movie was previously a favorite.");
-      }
-    } catch (error) {
-      console.log(error);
-    }
+    setFavouriteMovies([...favouriteMovies, id])
+    localStorage.setItem('favouriteMovies', JSON.stringify(favouriteMovies))
   };
+
+  console.log(favouriteMovies)
 
   return (
     isAllMovies && (
@@ -42,7 +34,7 @@ const CardIcons = ({ id, title, isAllMovies }) => {
           <a
             href="#"
             onClick={(e) => handleAddMovie4LocalStorage(e)}
-            className={localMovies.includes(id) ? "favouriteMovie" : ""}
+            className={favouriteMovies.includes(id) ? "favouriteMovie" : ""}
           >
             <MdFavorite size="1.2rem" />
           </a>
