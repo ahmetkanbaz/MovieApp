@@ -216,24 +216,6 @@
       "imdbRating": 7.9,
       "production": "Lionsgate",
       "id": 12
-    },
-    {
-      "title": "The Shawshank Redemption",
-      "year": 1994,
-      "released": "26 Aug 1994",
-      "runtime": 142,
-      "genre": "Drama",
-      "director": " Frank Darabont",
-      "writer": "Stephen King, Frank Darabont",
-      "actors": "Tim Robbins, Morgan Freeman, Bob Gunton",
-      "plot": "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
-      "language": "English",
-      "country": "USA",
-      "awards": "Nominated for 2 Golden Globes.",
-      "poster": "https://upload.wikimedia.org/wikipedia/tr/e/e6/Esaretin-bedeli.jpg",
-      "imdbRating": 9.3,
-      "production": "IMDB Production",
-      "id": 13
     }
   ],
   "actors": [
