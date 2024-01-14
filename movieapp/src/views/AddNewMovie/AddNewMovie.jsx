@@ -1,6 +1,7 @@
 import AddNewMovieForm from "../../components/AddNewMovieForm/AddNewMovieForm"
 import {useFormik} from 'formik'
 import { addNewMovie } from "../../utils/posts"
+import Toast from '../../common/Toast/Toast'
 
 const AddNewMovie = () => {
   const {handleSubmit, handleChange, handleBlur, handleReset, values, errors, touched, isSubmitting} = useFormik({
@@ -23,7 +24,7 @@ const AddNewMovie = () => {
     },
     onSubmit: async (values, bag) => {
       const response = await addNewMovie(values)
-      console.log(response)
+      Toast({message: response, type: 'success'})
       bag.setSubmitting(false)
       bag.resetForm()
     }
