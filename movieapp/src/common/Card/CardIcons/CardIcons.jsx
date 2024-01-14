@@ -1,14 +1,11 @@
 /* eslint-disable react/prop-types */
-import { MdFavorite, MdDelete } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { deleteMovie } from "../../../utils/deletes";
 import { getAllMovies } from "../../../utils/requests";
-import { useState } from "react";
 
 const CardIcons = ({ id, title, isAllMovies }) => {
   const dispatch = useDispatch();
-  const [favouriteMovies, setFavouriteMovies] = useState(JSON.parse(localStorage.getItem('favouriteMovies')) || [])
-
 
   const handleDeleteMovie = async (e) => {
     e.preventDefault();
@@ -19,25 +16,10 @@ const CardIcons = ({ id, title, isAllMovies }) => {
     }
   };
 
-  const handleAddMovie4LocalStorage = (e) => {
-    e.preventDefault();
-    setFavouriteMovies([...favouriteMovies, id])
-    localStorage.setItem('favouriteMovies', JSON.stringify(favouriteMovies))
-  };
-
-  console.log(favouriteMovies)
-
   return (
     isAllMovies && (
       <div className="pt-2">
-        <div className="position-absolute start-0 bottom-0 d-flex justify-content-around pb-1 w-100 icons">
-          <a
-            href="#"
-            onClick={(e) => handleAddMovie4LocalStorage(e)}
-            className={favouriteMovies.includes(id) ? "favouriteMovie" : ""}
-          >
-            <MdFavorite size="1.2rem" />
-          </a>
+        <div className="position-absolute start-0 bottom-0 d-flex justify-content-end pb-1 w-100 pe-3 icons">
           <a href="#" onClick={(e) => handleDeleteMovie(e)}>
             <MdDelete size="1.2rem" />
           </a>
