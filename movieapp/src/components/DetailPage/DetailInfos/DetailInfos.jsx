@@ -65,8 +65,7 @@ const DetailInfos = ({ singleMovie, setSingleMovie }) => {
 
 DetailInfos.propTypes = {
   singleMovie: PropTypes.object,
-  title: PropTypes.string,
-  poster: PropTypes.string,
+  setSingleMovie: PropTypes.func
 };
 
 export default DetailInfos;

@@ -3,6 +3,7 @@ import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { deleteMovie } from "../../../utils/deletes";
 import { getAllMovies } from "../../../utils/requests";
+import Toast from "../../Toast/Toast";
 
 const CardIcons = ({ id, title, isAllMovies }) => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const CardIcons = ({ id, title, isAllMovies }) => {
     e.preventDefault();
     if (window.confirm(`Are you sure you want to delete the ${title} movie?`)) {
       const response = await deleteMovie(id, title);
-      console.log(response);
+      Toast({ message: response, type: "success" });
       dispatch(getAllMovies());
     }
   };
