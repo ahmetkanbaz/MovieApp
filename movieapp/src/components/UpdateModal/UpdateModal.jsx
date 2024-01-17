@@ -12,6 +12,7 @@ import UpdateAwardsPoster from "./UpdateAwardsPoster/UpdateAwardsPoster";
 import UpdateImdbProduction from "./UpdateImdbProduction/UpdateImdbProduction";
 import { updateMovie } from "../../utils/puts";
 import { useParams } from "react-router-dom";
+import Toast from "../../common/Toast/Toast";
 
 const UpdateModal = ({ movie, setSingleMovie }) => {
   const {id} = useParams()
@@ -65,9 +66,10 @@ const UpdateModal = ({ movie, setSingleMovie }) => {
       const response = await updateMovie(id, values)
       if (!response.error) {
         setSingleMovie(values)
+        Toast({message: response.data, type: 'success'})
       }
       else {
-        console.log(response.message)
+        Toast({message: response.message, type: 'error'})
       }
       document.getElementById("closeModal").click();
       bag.setSubmitting(false);
